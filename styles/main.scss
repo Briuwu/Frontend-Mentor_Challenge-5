@@ -1,0 +1,192 @@
+@import './variables';
+
+@mixin mq($size){
+  @media only screen and (min-width: $size){
+    @content;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $spartan;
+  font-size: 62.50%;
+  margin: 0;
+  padding: 4em 3em;
+
+  @include mq(1050px){
+    padding: 0 3em;
+  }
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  @include mq(1050px){
+    padding: 1em 7em;
+  }
+}
+
+.title-section {
+  @include mq(1050px){
+    display: flex;
+  }
+}
+
+.card-section {
+  @include mq(1050px){
+    display: flex;
+    align-items: center;
+    gap: 3em;
+    height: 30em;
+
+    &_margin-1 {
+      align-self: flex-start;
+    }
+
+    &_margin-2 {
+      align-self: flex-end;
+    }
+  }
+}
+
+.user {
+  text-align: center;
+
+  &__title {
+    font-size: 1.5rem;
+    padding: 0 1em;
+    color: $very-dark-magenta;
+
+    @include mq(1050px){
+      margin: 0;
+      font-size: 2.5rem;
+      padding: 0 5em 0 0;
+    }
+  }
+
+  &__paragraph {
+    font-size: 0.85rem;
+    padding: 0 0.1em;
+    color: $dark-grayish-magenta;
+    margin-bottom: 4em;
+
+    @include mq(1050px){
+      line-height: 1.5rem;
+      padding: 0 10em 0 0;
+    }
+  }
+
+  @include mq(1050px){
+    text-align: left;
+    width: 50%;
+  }
+}
+
+.ratings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 0.85rem;
+
+  &--margin-1 {
+    @include mq(1050px){
+      align-self: flex-start;
+    }
+  }
+
+  &--margin-2 {
+    @include mq(1050px){
+      align-self: center;
+    }
+  }
+
+  &--margin-3 {
+    @include mq(1050px){
+      align-self: flex-end;
+    }
+  }
+
+  &__all {
+    margin-bottom: 4em;
+
+    &--img + &--img {
+      margin-left: 0.5em;
+    }
+
+    &--rated {
+    color: $very-dark-magenta;
+    font-weight: 700;
+
+      @include mq(1050px){
+        margin-left: 2em;
+      }
+    }
+
+    @include mq(1050px){
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  @include mq(1050px){
+    align-items: flex-start;
+    width: 40%;
+    padding-top: 1em;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: $very-dark-magenta;
+  color: $light-grayish-magenta;
+  padding: 3em;
+  margin-bottom: 1.5em;
+  border-radius: 1em;
+
+  &__user {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 2em;
+    margin-bottom: 1.5em;
+
+    &--img {
+      height: 5em;
+      border-radius: 50%;
+    }
+
+    &--info {
+      font-size: 0.8rem;
+      line-height: 0.5rem;
+
+      &-title {
+        font-weight: 500;
+      }
+
+      &-buyer {
+        color: $soft-pink;
+      }
+    }
+  }
+
+  &__quote {
+    line-height: 1.5rem;
+    font-size: 0.85rem;
+  }
+
+  @include mq(1050px){
+    margin: 0;
+    width: 33%;
+  }
+}

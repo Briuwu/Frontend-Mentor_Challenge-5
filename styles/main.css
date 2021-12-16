@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Spartan:wght@400;500;700&display=swap");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Spartan", sans-serif;
+  font-size: 62.50%;
+  margin: 0;
+  padding: 4em 3em;
+}
+
+@media only screen and (min-width: 1050px) {
+  body {
+    padding: 0 3em;
+  }
+}
+
+main {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media only screen and (min-width: 1050px) {
+  main {
+    padding: 1em 7em;
+  }
+}
+
+@media only screen and (min-width: 1050px) {
+  .title-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media only screen and (min-width: 1050px) {
+  .card-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 3em;
+    height: 30em;
+  }
+  .card-section_margin-1 {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  .card-section_margin-2 {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+}
+
+.user {
+  text-align: center;
+}
+
+.user__title {
+  font-size: 1.5rem;
+  padding: 0 1em;
+  color: #502050;
+}
+
+@media only screen and (min-width: 1050px) {
+  .user__title {
+    margin: 0;
+    font-size: 2.5rem;
+    padding: 0 5em 0 0;
+  }
+}
+
+.user__paragraph {
+  font-size: 0.85rem;
+  padding: 0 0.1em;
+  color: #937b92;
+  margin-bottom: 4em;
+}
+
+@media only screen and (min-width: 1050px) {
+  .user__paragraph {
+    line-height: 1.5rem;
+    padding: 0 10em 0 0;
+  }
+}
+
+@media only screen and (min-width: 1050px) {
+  .user {
+    text-align: left;
+    width: 50%;
+  }
+}
+
+.ratings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+@media only screen and (min-width: 1050px) {
+  .ratings--margin-1 {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+}
+
+@media only screen and (min-width: 1050px) {
+  .ratings--margin-2 {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+
+@media only screen and (min-width: 1050px) {
+  .ratings--margin-3 {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+}
+
+.ratings__all {
+  margin-bottom: 4em;
+}
+
+.ratings__all--img + .ratings__all--img {
+  margin-left: 0.5em;
+}
+
+.ratings__all--rated {
+  color: #502050;
+  font-weight: 700;
+}
+
+@media only screen and (min-width: 1050px) {
+  .ratings__all--rated {
+    margin-left: 2em;
+  }
+}
+
+@media only screen and (min-width: 1050px) {
+  .ratings__all {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media only screen and (min-width: 1050px) {
+  .ratings {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 40%;
+    padding-top: 1em;
+  }
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #502050;
+  color: #f7f2f7;
+  padding: 3em;
+  margin-bottom: 1.5em;
+  border-radius: 1em;
+}
+
+.card__user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  gap: 2em;
+  margin-bottom: 1.5em;
+}
+
+.card__user--img {
+  height: 5em;
+  border-radius: 50%;
+}
+
+.card__user--info {
+  font-size: 0.8rem;
+  line-height: 0.5rem;
+}
+
+.card__user--info-title {
+  font-weight: 500;
+}
+
+.card__user--info-buyer {
+  color: #ee68a4;
+}
+
+.card__quote {
+  line-height: 1.5rem;
+  font-size: 0.85rem;
+}
+
+@media only screen and (min-width: 1050px) {
+  .card {
+    margin: 0;
+    width: 33%;
+  }
+}
+/*# sourceMappingURL=main.css.map */
